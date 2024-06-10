@@ -89,13 +89,13 @@ def doesContain(str1, str2):
 
 
 if __name__ == '__main__':
-    print(countUniqueNames("debbie", "Egli", "Deborah", "Egli", "Deborah Egli"))  # 1
+    print(countUniqueNames("Debbie", "Egli", "Deborah", "Egli", "Deborah Egli"))  # 1
     print(countUniqueNames("Deborah", "Egli", "Debbie", "Egli", "Debbie Egli"))  # 1
-    print(countUniqueNames("Debora", "Egli", "Debie", "Egli", "Jad Egli"))  # 2 (contains everything nickname typo in nickname and regular name and different names)
+    print(countUniqueNames("Debora", "Egli", "Debie", "Egli", "Jad Egli"))  # 2 (contains everything nickname, typo in nickname and in regular name and different names)
     print(countUniqueNames("Deborah", "Egni", "Deborah", "Egli", "Deborah Egli"))  # 1
     print(countUniqueNames("Deborah S", "Egli", "Deborah", "Egli", "Egli Deborah"))  # 1
     print(countUniqueNames("Michele", "Egli", "Deborah", "Egli", "Michele Egli"))  # 2
-    print(countUniqueNames("ahmad", "Egli", "Deborah", "jaber", "amin jaber masalha"))  # 3
+    print(countUniqueNames("Ahmad", "Egli", "Deborah", "Jaber", "Amin jaber masalha"))  # 3
     print(countUniqueNames("Catheen", "Egli", "Catleen", "Egli", "Kay Egli"))  # 1 (nickname with typo)
     print(countUniqueNames("Aaron Michael", "Smith", "Erin", "Smith", "Aaron Smith"))  # Expected: 1 (Aaron Michael, Erin are considered the same person)
     print(countUniqueNames("Aaron Michael", "Smith", "Ron", "Smith", "Aaron Michael Smith"))  # Expected: 1 (Aaron Michael, Ron are considered the same person)
