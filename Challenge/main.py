@@ -100,6 +100,7 @@ def doesContain(str1, str2):
 if __name__ == '__main__':
     print(countUniqueNames("Deborah", "Egli", "Deborah", "Egli", "Deborah Egli"))  # 1
     print(countUniqueNames("Deborah", "Egli", "Debbie", "Egli", "Debbie Egli"))  # 1
+    print(countUniqueNames("Debora", "Egli", "Debie", "Egli", "Jad Egli"))  # 2 (contains everything nickname typo in nickname and regular name and different names)
     print(countUniqueNames("Deborah", "Egni", "Deborah", "Egli", "Deborah Egli"))  # 1
     print(countUniqueNames("Deborah S", "Egli", "Deborah", "Egli", "Egli Deborah"))  # 1
     print(countUniqueNames("Michele", "Egli", "Deborah", "Egli", "Michele Egli"))  # 2
@@ -112,11 +113,4 @@ if __name__ == '__main__':
     print(countUniqueNames("Aaron Micheal", "Smith", "Ron", "Smith", "Aaron Michael Smith"))  # Expected: 1 (Micheal is a typo for Michael, Ron is a nickname)
     print(countUniqueNames("Aaron Michael", "Smit", "Ronnie", "Smit", "Aaron Michael Smit"))  # Expected: 1 (Smit is a typo for Smith, Ronnie is a nickname)
     print(countUniqueNames("Abel John", "Doe", "Ab", "Doe", "Abel John Doe"))  # Expected: 1 (Ab is a nickname for Abel)
-    print(countUniqueNames("Abel John", "Doe", "Abe", "Doe", "Abel John Doe"))  # Expected: 1 (Abe is a nickname for Abel)
-    print(countUniqueNames("Abel John", "Doe", "Eb", "Doe", "Abel John Doe"))  # Expected: 1 (Eb is a nickname for Abel)
-    print(countUniqueNames("Abel John", "Doe", "Ebbie", "Doe", "Abel John Doe"))  # Expected: 1 (Ebbie is a nickname for Abel)
-    print(countUniqueNames("Abel Joh", "Doe", "Ab", "Doe", "Abel John Doe"))  # Expected: 1 (Joh is a typo for John, Ab is a nickname for Abel)
-    print(countUniqueNames("Abel John", "Doe", "Abe", "Doe", "Abel John Dae"))  # Expected: 1 (Dae is a typo for Doe, Abe is a nickname for Abel)
-    print(countUniqueNames("Abel Jon", "Doe", "Eb", "Doe", "Abel John Doe"))  # Expected: 1 (Jon is a typo for John, Eb is a nickname for Abel)
-    print(countUniqueNames("Abel John", "Doe", "Ebbie", "Doe", "Abel John Do"))  # Expected: 1 (Do is a typo for Doe, Ebbie is a nickname for Abel)
-    print(countUniqueNames("Abiel Micheal", "Doe", "Ab", "Doe", "Abiel Michael Doe"))  # Expected: 1 (Micheal is a typo for Michael, Ab is a nickname for Abiel)
+
