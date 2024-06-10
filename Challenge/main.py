@@ -53,20 +53,11 @@ def isNickname(name1, name2):
     with open('nicknames.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            #checking if name 1 is a name (in the first if statement) or a nickname (in the else if) (that exists in the csv file) then returning true if name 2 is a nickname (in the first if statement) or a name (in the else if statement)
             if row['name'].lower() == name1 or isTypo(row['name'].lower(), name1):
                 if row['nickname'].lower() == name2 or isTypo(row['nickname'].lower(), name2):
                     return True
             elif row['nickname'].lower() == name1 or isTypo(row['nickname'].lower(), name1):
                 if row['name'].lower() == name2 or isTypo(row['name'].lower(), name2):
-                    return True
-
-            #checking if name 2 is a name or a nickname(that exists in the csv) then returning true if name 1 is a nickname (first if statement) or a name (second if statement)
-            elif row['name'].lower() == name2 or isTypo(row['name'].lower(), name2):
-                if row['nickname'].lower() == name1 or isTypo(row['nickname'].lower(), name1):
-                    return True
-            elif row['nickname'].lower() == name2 or isTypo(row['nickname'].lower(), name2):
-                if row['name'].lower() == name1 or isTypo(row['name'].lower(), name1):
                     return True
     return False
 
@@ -98,7 +89,7 @@ def doesContain(str1, str2):
 
 
 if __name__ == '__main__':
-    print(countUniqueNames("Deborah", "Egli", "Deborah", "Egli", "Deborah Egli"))  # 1
+    print(countUniqueNames("debbie", "Egli", "Deborah", "Egli", "Deborah Egli"))  # 1
     print(countUniqueNames("Deborah", "Egli", "Debbie", "Egli", "Debbie Egli"))  # 1
     print(countUniqueNames("Debora", "Egli", "Debie", "Egli", "Jad Egli"))  # 2 (contains everything nickname typo in nickname and regular name and different names)
     print(countUniqueNames("Deborah", "Egni", "Deborah", "Egli", "Deborah Egli"))  # 1
